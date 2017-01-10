@@ -1,0 +1,11 @@
+machine:
+  xcode:
+    version: "8.0"
+
+dependencies:
+  override:
+    - bin/setup
+
+test:
+  override:
+    - bin/test -r

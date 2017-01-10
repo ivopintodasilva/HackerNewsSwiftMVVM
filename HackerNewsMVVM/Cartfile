@@ -1,0 +1,6 @@
+github "thoughtbot/Argo"
+github "edwardaux/Ogra"
+github "thoughtbot/Curry"
+github "Alamofire/Alamofire" ~> 4.0
+github "mxcl/PromiseKit" ~> 4.0
+github "PromiseKit/Alamofire-" ~> 1.0

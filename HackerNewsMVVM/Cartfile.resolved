@@ -1,0 +1,7 @@
+github "Alamofire/Alamofire" "4.2.0"
+github "thoughtbot/Curry" "v3.0.0"
+github "mxcl/PromiseKit" "4.1.3"
+github "thoughtbot/Runes" "v4.0.1"
+github "thoughtbot/Argo" "v4.1.1"
+github "PromiseKit/Alamofire-" "1.0.6"
+github "edwardaux/Ogra" "4.1.1"
