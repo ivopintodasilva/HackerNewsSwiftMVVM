@@ -1,0 +1,10 @@
+framework module Ogra {
+  umbrella header "Ogra.h"
+
+  export *
+  module * { export * }
+}
+
+module Ogra.Swift {
+    header "Ogra-Swift.h"
+}
