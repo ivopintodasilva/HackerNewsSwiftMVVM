@@ -21,16 +21,6 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        addSubviews()
-        
-        tableView.dataSource = self
-        
-        _ = viewModel.fetchNews().then { _ in DispatchQueue.main.async { self.tableView.reloadData() } }
-    }
-    
     private func addSubviews() {
         view.addSubview(tableView)
     }
@@ -39,6 +29,29 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         tableView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addSubviews()
+        
+        tableView.dataSource = self
+        
+        /// Closure used to deal with the state changes
+        viewModel.stateChangeHandler = { [unowned self] change in
+            switch change {
+            case .none:
+                break
+            case .fetchStateChanged:
+                break
+            case .newsChanged:
+                DispatchQueue.main.async { self.tableView.reloadData() }
+            }
+        }
+        
+        /// Order the view model to fetch the news
+        viewModel.fetchNews()
     }
 
     /**
