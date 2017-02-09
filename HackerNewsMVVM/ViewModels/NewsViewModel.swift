@@ -8,28 +8,33 @@
 import Foundation
 import PromiseKit
 
-class InitialViewModel {
-
-    let news: News
-
+class NewsViewModel {
+    
+    private var news: News
+    
+    var source: String? {
+        return "Hacker News"
+    }
+    
+    var articles: [ArticleViewModel]? {
+        return news.articles.map { ArticleViewModel(article: $0) }
+    }
+    
     init() {
         news = News(source: "Hacker News")
-        
-        fetchNews()
     }
     
     /**
      Firstly, fetches the id's of the top stories.
      Then, fetches the articles that correspond to those id's
      */
-    func fetchNews() {
+    func fetchNews() -> Promise<News> {
         
-        _ = Request
+        return Request
             .requestTopStories()
             .then(execute: fetchArticles)
-            .then { articles in articles.forEach { self.news.addArticle(article: $0) }
-                
-        }
+            .then { articles in articles.forEach { self.news.addArticle(article: $0) }}
+            .then { return self.news }
     }
     
     /**
@@ -41,7 +46,7 @@ class InitialViewModel {
     }
     
     /**
-     Fetches on article
+     Fetches an article
      */
     func fetchArticle(id: Int) -> Promise<Article> {
         return Request.requestArticle(id: id)
