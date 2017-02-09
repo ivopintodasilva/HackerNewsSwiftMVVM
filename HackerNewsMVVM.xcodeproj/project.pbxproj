@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48501B301E4D1E1400910D23 = {
+			isa = PBXBuildFile;
+			fileRef = 48501B2F1E4D1E1400910D23;
+		};
 		487E31241E259F0400B8F732 = {
 			isa = PBXBuildFile;
 			fileRef = 487E31231E259F0400B8F732;
@@ -30,10 +34,6 @@
 		487E314C1E259FDA00B8F732 = {
 			isa = PBXBuildFile;
 			fileRef = 487E314A1E259FDA00B8F732;
-		};
-		487E314D1E259FDA00B8F732 = {
-			isa = PBXBuildFile;
-			fileRef = 487E314B1E259FDA00B8F732;
 		};
 		487E31521E259FF500B8F732 = {
 			isa = PBXBuildFile;
@@ -79,9 +79,24 @@
 			isa = PBXBuildFile;
 			fileRef = 487E31661E25A12600B8F732;
 		};
+		48EDB3441E4BE44900BA62CD = {
+			isa = PBXBuildFile;
+			fileRef = 48EDB3431E4BE44900BA62CD;
+		};
+		48EDB3471E4BE72400BA62CD = {
+			isa = PBXBuildFile;
+			fileRef = 48EDB3461E4BE72400BA62CD;
+		};
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48501B2F1E4D1E1400910D23 = {
+			isa = PBXFileReference;
+			fileEncoding = 4;
+			lastKnownFileType = sourcecode.swift;
+			path = NewsState.swift;
+			sourceTree = "<group>";
+		};
 		487E31201E259F0400B8F732 = {
 			isa = PBXFileReference;
 			explicitFileType = wrapper.application;
@@ -98,7 +113,6 @@
 		487E31251E259F0400B8F732 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			name = ViewController.swift;
 			path = ViewController.swift;
 			sourceTree = "<group>";
 		};
@@ -135,13 +149,6 @@
 			path = Article.swift;
 			sourceTree = "<group>";
 		};
-		487E314B1E259FDA00B8F732 = {
-			isa = PBXFileReference;
-			fileEncoding = 4;
-			lastKnownFileType = sourcecode.swift;
-			path = News.swift;
-			sourceTree = "<group>";
-		};
 		487E314E1E259FF500B8F732 = {
 			isa = PBXFileReference;
 			fileEncoding = 4;
@@ -153,7 +160,7 @@
 			isa = PBXFileReference;
 			fileEncoding = 4;
 			lastKnownFileType = sourcecode.swift;
-			path = InitialViewModel.swift;
+			path = NewsViewModel.swift;
 			sourceTree = "<group>";
 		};
 		487E31501E259FF500B8F732 = {
@@ -219,6 +226,20 @@
 			path = HackerNewsMVVM/Carthage/Build/iOS/Runes.framework;
 			sourceTree = "<group>";
 		};
+		48EDB3431E4BE44900BA62CD = {
+			isa = PBXFileReference;
+			fileEncoding = 4;
+			lastKnownFileType = sourcecode.swift;
+			path = ArticleViewModel.swift;
+			sourceTree = "<group>";
+		};
+		48EDB3461E4BE72400BA62CD = {
+			isa = PBXFileReference;
+			fileEncoding = 4;
+			lastKnownFileType = sourcecode.swift;
+			path = TableViewCell.swift;
+			sourceTree = "<group>";
+		};
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +260,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48501B2E1E4D1E0300910D23 = {
+			isa = PBXGroup;
+			children = (
+				48501B2F1E4D1E1400910D23,
+			);
+			name = States;
+			path = States;
+			sourceTree = "<group>";
+		};
 		487E31171E259F0400B8F732 = {
 			isa = PBXGroup;
 			children = (
@@ -261,8 +291,10 @@
 			children = (
 				487E31581E25A0E900B8F732,
 				487E31571E25A0DA00B8F732,
+				48501B2E1E4D1E0300910D23,
 				487E313E1E259F3300B8F732,
 				487E31561E25A0CF00B8F732,
+				48EDB3451E4BE71100BA62CD,
 				487E31231E259F0400B8F732,
 				487E312A1E259F0400B8F732,
 				487E312F1E259F0400B8F732,
@@ -277,16 +309,15 @@
 			children = (
 				487E31251E259F0400B8F732,
 			);
-			name = ViewControllers;
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		487E31561E25A0CF00B8F732 = {
 			isa = PBXGroup;
 			children = (
+				48EDB3431E4BE44900BA62CD,
 				487E314F1E259FF500B8F732,
 			);
-			name = ViewModels;
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
@@ -297,7 +328,6 @@
 				487E31501E259FF500B8F732,
 				487E31511E259FF500B8F732,
 			);
-			name = Network;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -305,9 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				487E314A1E259FDA00B8F732,
-				487E314B1E259FDA00B8F732,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -323,6 +351,15 @@
 				487E315A1E25A10D00B8F732,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48EDB3451E4BE71100BA62CD = {
+			isa = PBXGroup;
+			children = (
+				48EDB3461E4BE72400BA62CD,
+			);
+			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,12 +462,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48501B301E4D1E1400910D23,
 				487E31521E259FF500B8F732,
 				487E31261E259F0400B8F732,
 				487E31241E259F0400B8F732,
 				487E31551E259FF500B8F732,
-				487E314D1E259FDA00B8F732,
+				48EDB3471E4BE72400BA62CD,
 				487E31541E259FF500B8F732,
+				48EDB3441E4BE44900BA62CD,
 				487E314C1E259FDA00B8F732,
 				487E31531E259FF500B8F732,
 			);
@@ -604,6 +643,7 @@
 				487E31341E259F0400B8F732,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
