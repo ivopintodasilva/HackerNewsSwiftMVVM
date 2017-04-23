@@ -36,7 +36,10 @@ class ViewController: UIViewController {
         
         addSubviews()
         
+        tableView.backgroundColor = UIColor(red: 246/255, green: 245/255, blue: 240/255, alpha: 255)
+        
         tableView.dataSource = self
+        tableView.delegate = self
         
         /// Closure used to deal with the state changes
         viewModel.stateChangeHandler = { [unowned self] change in
@@ -87,9 +90,15 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        tableViewCell.configure(title: viewModel.articles?[indexPath.row].title)
+        tableViewCell.configure(title: viewModel.articles?[indexPath.row].title, user: "Teixeira", score: "12")
 
         return tableViewCell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }
 

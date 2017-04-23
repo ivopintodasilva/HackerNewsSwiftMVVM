@@ -25,6 +25,7 @@
 		487E31531E259FF500B8F732 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487E314F1E259FF500B8F732 /* NewsViewModel.swift */; };
 		487E31541E259FF500B8F732 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487E31501E259FF500B8F732 /* Request.swift */; };
 		487E31551E259FF500B8F732 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487E31511E259FF500B8F732 /* Urls.swift */; };
+		48ACBE871EAD08EB00AA9083 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48ACBE861EAD08EB00AA9083 /* Cartography.framework */; };
 		48EDB3441E4BE44900BA62CD /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EDB3431E4BE44900BA62CD /* ArticleViewModel.swift */; };
 		48EDB3471E4BE72400BA62CD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EDB3461E4BE72400BA62CD /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		487E31621E25A12000B8F732 /* PMKAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKAlamofire.framework; path = HackerNewsMVVM/Carthage/Build/iOS/PMKAlamofire.framework; sourceTree = "<group>"; };
 		487E31641E25A12300B8F732 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = HackerNewsMVVM/Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		487E31661E25A12600B8F732 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = HackerNewsMVVM/Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		48ACBE861EAD08EB00AA9083 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 		48EDB3431E4BE44900BA62CD /* ArticleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		48EDB3461E4BE72400BA62CD /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 			files = (
 				48501B321E4D375300910D23 /* Alamofire.framework in Frameworks */,
 				48501B341E4D375600910D23 /* Argo.framework in Frameworks */,
+				48ACBE871EAD08EB00AA9083 /* Cartography.framework in Frameworks */,
 				48501B3E1E4D376400910D23 /* Runes.framework in Frameworks */,
 				48501B361E4D375900910D23 /* Curry.framework in Frameworks */,
 				48501B381E4D375C00910D23 /* Ogra.framework in Frameworks */,
@@ -160,6 +163,7 @@
 		487E31591E25A10D00B8F732 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48ACBE861EAD08EB00AA9083 /* Cartography.framework */,
 				48501B3D1E4D376400910D23 /* Runes.framework */,
 				48501B3B1E4D376100910D23 /* PromiseKit.framework */,
 				48501B391E4D375F00910D23 /* PMKAlamofire.framework */,
@@ -269,6 +273,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Ogra.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cartography.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
